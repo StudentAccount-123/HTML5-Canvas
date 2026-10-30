@@ -40,6 +40,36 @@ https://www.w3schools.com/w3css/default.asp
 var docMod = document.lastModified; // loads last modified time stamp into docMod variable
 //alert("This file last modified " + docMod); // generates alert box with last modified time stamp. un-comment out this entire line if you want to use.
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
+
+function drawRect() { //This draws a rectangle on the canvas
+	var a_canvas = document.getElementById('a'); //this variable calls the canvas using an id
+	var a_context = a_canvas.getContext('2d'); //sets canvas to 2 dimensional
+	a_context.fillStyle = "#d922d2"; // rectangle is grey
+	a_context.fillRect(50, 50, 40, 30);//sets coordinates and placement of rectangle
+
+};
+
+function my_name() {//this function displays my name, "Alexandria"
+	var a_canvas = document.getElementById('a'); //this variable calls the canvas using an id
+	var a_context = a_canvas.getContext('2d'); //sets canvas to 2 dimensional
+	a_context.font = "50px Times New Roman"; // adds font for my name and size
+	a_context.fillStyle = "#22d9a2"; // sets color of text to black
+	a_context.fillText ("Student Account", 100, 300); //adds name text and coordinates for my name
+}; 
+
+function my_image() {//this function displays my chosen image
+	var a_canvas =document.getElementById('a'); //this variable calls the canvas using an id
+	var a_context = a_canvas.getContext('2d'); //sets canvas to 2 dimensional
+	var bevoImage = document.getElementById('bevoImage');//pulls longhorn image
+	a_context.drawImage(bevoImage, 100, 100, 300, 250);//draws image with size created by 4 numbers
+
+};
+
+function clear_canvas() {//this function clears the canvas
+	var a_canvas =document.getElementById('a');//this variable calls the canvas using an id
+ 	a_canvas.width = a_canvas.width; // causes the canvas to clear
+};
+
 </script>
 
 
@@ -55,7 +85,7 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	
 <div id="content" class="w3-container">
 	<p>Content goes here.</p>
-	<canvas id="a" width="300" height="190" style="border:2px solid #000000;"></canvas>
+	<canvas id="a" width="500" height="390" style="border:2px solid #000000;"></canvas>
    <p> Click the buttons below to create a work of art! </p> <!-- Place your comment here!-->
 	<a onclick="drawRect();" class="w3-btn w3-grey w3-round"> Draw Rectangle!</a> <!--Place your comment describing your new code here-->
    <a onclick="my_name();" class="w3-btn w3-grey w3-round"> Write name!</a> <!--Place your comment here-->
